@@ -1,0 +1,1 @@
+let array: boolean[] = [true, false, true, true];
