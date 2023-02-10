@@ -1,5 +1,4 @@
 "use strict";
-// exemplo number
 let num1 = 23.01023;
 let num2 = 0x78;
 let num3 = 0o577;
@@ -8,7 +7,6 @@ console.log('Number flutuante: ', num1);
 console.log('Number hexa ....: ', num2);
 console.log('Number octal ...: ', num3);
 console.log('Number binario .: ', num4);
-// exemplo bigint
 let big1 = 99233219998770000345n;
 let big2 = 0x32545345n;
 let big3 = 476760805n;
