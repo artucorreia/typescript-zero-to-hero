@@ -5,8 +5,8 @@ function error(msg: string): never {
 
 console.log(error('Error Mensagem 01'));
 
-// never inferido automaticamente
-function error2(msg: string) {
+// ex 02
+function error2(msg: string): never {
     throw new Error(msg);
 }
 
