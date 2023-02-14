@@ -56,3 +56,63 @@ function onbording4(pessoa: Pessoa4): string {
 }
 
 console.log(onbording4({nome: 'Arthur', funcao: 'Front-end Developer', linguagem: 'JavaScript/TypeScript'}));
+
+// interface com herança
+interface Mae {
+    nome: string;
+}
+
+interface Pai {
+    sobrenome: string;
+}
+
+interface Filha extends Mae, Pai {
+    idade: number
+}
+
+const filha: Filha = {
+    nome: 'Maria',
+    sobrenome: 'Luíza',
+    idade: 20
+}
+
+// interseções
+interface Cachorro {
+    raca: string;
+}
+
+interface Gato {
+    raca: string;
+}
+
+type Animal = Cachorro & Gato;
+
+// generic objects
+type Usuario = {
+    nome: string;
+    email: string;
+}
+
+type Admin = {
+    nome: string;
+    email: string;
+    admin: true;
+}
+
+const usuario: Usuario = {
+    nome: 'Arthur',
+    email: 'arthur@gmail.com'
+}
+
+const admin: Admin = {
+    nome: 'Fernando',
+    email: 'fernando@gmail.com',
+    admin: true
+}
+
+function acessarSistema<T>(usuario: T): T {
+    return usuario;
+}
+
+console.log(acessarSistema<Admin>(admin));
+console.log(acessarSistema<Usuario>(usuario));
