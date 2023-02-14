@@ -10,7 +10,7 @@ class Pessoa {
         this.ultimoNome = ultimoNome;
     }
 
-    nomeCompleto() {
+    nomeCompleto(): string {
         if (this.ultimoNome) {
             return `${this.nome} ${this.sobrenome} ${this.ultimoNome}`;
         } {
