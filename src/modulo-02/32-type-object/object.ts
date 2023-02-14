@@ -8,11 +8,11 @@ const pessoa = {
 console.log(pessoa);
 
 // object como parâmetro
-function onbording(funcionario: {nome: string}): string {
+function onbording1(funcionario: {nome: string}): string {
     return `Bem-Vindo ${funcionario.nome}`;
 }
 
-console.log(onbording({nome: 'Arthur'})); 
+console.log(onbording1({nome: 'Arthur'})); 
 
 // object nomeado
 interface Pessoa2 {
