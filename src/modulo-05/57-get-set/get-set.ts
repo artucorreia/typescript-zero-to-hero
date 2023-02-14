@@ -42,6 +42,6 @@ class Estudante2 {
 }
 
 const primeiroEstudante: Estudante2 = new Estudante2('Arthur', 'Ciências da Computação');
-console.log(primeiroEstudante.curso);
+console.log(primeiroEstudante.curso); // Ciências da Computação
 primeiroEstudante.curso = 'S.I';
-console.log(primeiroEstudante.curso);
+console.log(primeiroEstudante.curso); // Sistemas de Informação
