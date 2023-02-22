@@ -4,7 +4,7 @@ interface IPessoa {
     sobrenome: string;
 }
 
-const carlos = {
+const carlos: IPessoa = {
     nome: 'Arthur',
     sobrenome: 'Correia'
 }
@@ -74,3 +74,16 @@ class Gato implements IAnimal {
 const gato1 = new Gato('Mingau', 6, true);
 console.log(gato1);
 console.log(gato1.comer('peixe'));
+
+// interfaces x alias type 
+interface Pessoa_03 {
+    nome: string;
+    idade: number;
+    cpf: number;
+}
+
+type Pessoa_04 = {
+    nome: string;
+    idade: number;
+    cpf: number;
+}
