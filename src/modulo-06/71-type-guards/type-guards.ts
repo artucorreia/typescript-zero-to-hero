@@ -43,8 +43,45 @@ function detalhesVeiculos(veiculo: Carro_02 | Moto): string {
 const carrinho = new Carro_02('sandero', 'renault');
 const motinha = new Moto('scooter', 2023);
 
-console.log(detalhesVeiculos(carrinho));
-console.log(detalhesVeiculos(motinha));
+console.log(detalhesVeiculos(carrinho)); 
+// output: O nome do carro é sandero e a marca é renault
+console.log(detalhesVeiculos(motinha)); 
+// output: O nome da moto é scooter e a marca é 2023
 
 // in
-// console.log(ano in Moto);
+interface Animal_06 {
+    grupo: string;
+}
+
+class Passaro implements Animal_06 {
+    grupo: string;
+    corPena: string;
+
+    constructor(grupo: string, corPena: string) {
+        this.corPena = corPena;
+        this.grupo = grupo;
+    }
+}
+
+class Peixe implements Animal_06 {
+    grupo: string;
+    corPeixe: string;
+
+    constructor(grupo: string, corPeixe: string) {
+        this.corPeixe = corPeixe;
+        this.grupo = grupo;
+    }
+}
+
+function moverAnimal(animal: Peixe | Passaro): string {
+    if ('corPena' in animal) {
+        return `O ${animal.grupo} está voando`;
+    } else {
+        return `O ${animal.grupo} está nadando`;
+    }
+}
+
+console.log(moverAnimal(new Passaro('canario', 'amarelo'))); 
+// output: o canario está voando
+console.log(moverAnimal(new Peixe('bagre', 'verde'))); 
+// output: o bagre esta nadando
